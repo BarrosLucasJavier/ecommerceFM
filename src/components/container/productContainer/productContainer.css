@@ -1,0 +1,15 @@
+.productContainer{
+    display: flex;
+    flex-direction: column;
+}
+@media(min-width:700px){
+
+    .productContainer{
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        padding: 3rem;
+        margin-top: 2rem;
+        gap: 5vw;
+    }
+}

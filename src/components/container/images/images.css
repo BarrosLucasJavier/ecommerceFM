@@ -1,0 +1,65 @@
+.imgContainer{
+    position: relative;
+    height: 25rem;
+    background-color: hsl(26, 100%, 55%);
+    display: flex;
+}
+.imgProduct{
+    height: 100%;
+    object-fit: cover;
+    max-width: 100vw;
+    margin: 0 auto;
+}
+.imgLeft{
+    left: 1rem;
+}
+.imgRigth, .imgLeft{
+    position: absolute;
+    right: 1rem;
+    top: 10rem;
+    background-color: white;
+    border-radius: 50%;
+    padding: 0.6rem 0.8rem;
+}
+.imgLeft, .imgRigth:hover{
+    cursor: pointer;
+}
+.thumbnailContainer{
+    display: none;
+}
+
+@media(min-width:700px){
+    .imgContainer{
+        background-color: white;
+        width: auto;
+        display: inline-block;
+    }
+    .imgProduct{
+        border-radius: 1rem;
+    }
+    .imgLeft, .imgRigth{
+        display: none;
+    }
+    .thumbnailContainer{
+        display: flex;
+        gap: 1rem;
+        padding: 1rem 0;
+        justify-content: space-between;
+    }
+    .thumbnailContainer img{
+        border-radius: 1rem;
+        width: 5rem;
+    }
+    .thumbnailContainer img:hover{
+        cursor: pointer;
+        opacity: 0.5;
+    }
+    .selected{
+        opacity: 0.5;
+    }
+    .bor {
+        outline: 3px solid hsl(26, 100%, 55%);
+        border-radius: 1rem;
+        height:5rem; 
+    }
+}

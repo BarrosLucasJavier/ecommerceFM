@@ -1,0 +1,117 @@
+.navbar{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 4rem;
+    gap: 1rem;
+    padding: 1.4rem 1.5rem;
+    border-bottom: 1px solid hsl(220, 14%, 75%);
+}
+.navbar img{
+    align-self: end;
+}
+.navbar img:hover{
+    cursor: pointer;
+}
+.navbar h1{
+    font-size: 1.9rem;
+    flex-grow: 1;
+}
+.navbar .navbar-menu{
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    top:0;
+    left: 0;
+    padding: 1.7rem 1.5rem;
+    background-color: rgb(255, 255, 255);
+    width: 60vw;
+    gap: 1rem;
+    min-height: 100vh;
+    transition: all 1s;
+    z-index: 5;
+
+}
+.navbar-menu::after{
+    content: '';
+    width: 40vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.6);
+    position: absolute;
+    top: 0;
+    left: 60vw;
+}
+#iconClose{
+    align-self: flex-start;
+}
+.navbar img.avatar{
+    height: 1.5rem;
+    align-self: center;
+}
+.navbar-cart{
+    position: relative;
+}
+.navbar-cart span{
+    position: absolute;
+    top: -10px;
+    left: 0.5rem;
+    font-size: 0.6rem;
+    font-weight: 700;
+    color: white;
+    background-color:hsl(26, 100%, 55%) ;
+    padding: 0.2rem 0.6rem;
+    border-radius: 0.7rem;
+}
+.hide{
+    transform: translateX(-180%);
+}
+.show{
+    transform: translateX(0);
+}
+
+@media (min-width:700px){
+    .navbar{
+        max-width: 80vw;
+        margin: auto;
+        gap: 2.5rem;
+        height: 7rem;
+    }
+    .navbar .navbar-menu{
+        position:static;
+        flex-direction: row;
+        align-items: flex-start;
+        padding: 0;
+        background-color: rgb(255, 255, 255);
+        gap: 1rem;
+        min-height: auto;
+    }
+    .navbar-menu::after{
+        display: none;
+    }
+    #iconClose{
+        display: none;
+    }
+    .menuIcon{
+        display: none;
+    }
+    .navbar-menu a{
+        padding: 2.7rem 0;
+        background-color: transparent;
+        font-weight: 700;
+        color: hsl(219, 9%, 45%);
+        border-bottom: 4px solid rgba(0, 0, 0, 0);
+    }
+    .navbar-menu a:hover{
+        border-bottom: 4px solid hsl(26, 100%, 55%) ;
+        cursor: pointer;
+        color: black;
+    }
+    .navbar img.avatar{
+        height: 2.5rem;
+    }
+    .navbar img.avatar:hover{
+        border: 2px solid hsl(26, 100%, 55%);
+        border-radius: 50%;
+    }
+}

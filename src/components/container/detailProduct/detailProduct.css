@@ -1,0 +1,78 @@
+.detail-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 1rem;
+    padding: 1.3rem;
+    max-width: 35rem;
+    margin: auto;
+}
+.detail-container h5{
+    font-size: 0.7rem;
+    letter-spacing: 0.1rem;
+    color: hsl(26, 100%, 55%);
+    font-weight: 700;
+}
+.detail-container h2{
+    font-size: 1.8rem;
+}
+.detail-container p{
+    color: hsl(219, 9%, 45%);
+}
+.detail-price{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+}
+.detail-price h3{
+    font-size: 1.7rem;
+}
+.detail-price .discount{
+    background-color:hsl(25, 100%, 94%);
+    padding: 0.4rem;
+    border-radius: 0.5rem;
+    font-size: 0.9rem;
+}
+.detail-price .original-price{
+    flex-grow: 1;
+    text-align: right;
+    color:hsl(220, 14%, 75%) ;
+    font-size: 1rem;
+}
+.detail-amount{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1rem;
+    background-color: hsl(223, 64%, 98%);
+    border-radius: 0.6rem;
+}
+.detail-amount img:hover, .detail-container button{
+    cursor: pointer;
+}
+.detail-container button{
+    padding: 1rem;
+    border-radius: 0.8rem;
+    border: none;
+    color: white;
+    background-color:hsl(26, 100%, 55%) ;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    justify-content: center;
+    margin-bottom: 1.5rem;
+    box-shadow: 0 10px 15px hsl(25, 85%, 74%);
+}
+
+.iconCart{
+    width: 1.2rem;
+    filter: brightness(100);
+}
+@media(min-width:700px){
+    .detail-container{
+        margin: 0;
+        max-width: 35vw;
+        gap: 1.3rem;
+    }
+}
